@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Template\contact.html" />
+    <None Include="wwwroot\Template\css\bootstrap.css" />
+    <None Include="wwwroot\Template\css\responsive.css" />
+    <None Include="wwwroot\Template\css\style.css" />
+    <None Include="wwwroot\Template\fruit.html" />
+    <None Include="wwwroot\Template\images\card-item-1.png" />
+    <None Include="wwwroot\Template\images\card-item-2.png" />
+    <None Include="wwwroot\Template\images\card-item-3.png" />
+    <None Include="wwwroot\Template\images\client.png" />
+    <None Include="wwwroot\Template\images\fb.png" />
+    <None Include="wwwroot\Template\images\gauva.png" />
+    <None Include="wwwroot\Template\images\grapes.png" />
+    <None Include="wwwroot\Template\images\instagram.png" />
+    <None Include="wwwroot\Template\images\linkedin.png" />
+    <None Include="wwwroot\Template\images\logo.png" />
+    <None Include="wwwroot\Template\images\menu.png" />
+    <None Include="wwwroot\Template\images\next.png" />
+    <None Include="wwwroot\Template\images\orange-dish.png" />
+    <None Include="wwwroot\Template\images\orange.png" />
+    <None Include="wwwroot\Template\images\prev.png" />
+    <None Include="wwwroot\Template\images\search-icon.png" />
+    <None Include="wwwroot\Template\images\slide-img.png" />
+    <None Include="wwwroot\Template\images\tasty-image.png" />
+    <None Include="wwwroot\Template\images\twitter.png" />
+    <None Include="wwwroot\Template\index.html" />
+    <None Include="wwwroot\Template\js\bootstrap.js" />
+    <None Include="wwwroot\Template\js\jquery-3.4.1.min.js" />
+    <None Include="wwwroot\Template\service.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+  </ItemGroup>
+
+</Project>
