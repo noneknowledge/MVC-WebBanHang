@@ -11,23 +11,21 @@ namespace MVC_template.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            GlobalValues.CustomerID = Guid.NewGuid().ToString();
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View("Show");
         }
 
         public IActionResult Privacy()
         {
             return View();
         }
+       
 
-        public IActionResult Show()
-        {
-            return View();
-        }
-
+        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

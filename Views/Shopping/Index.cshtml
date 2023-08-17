@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MVC_template.Data.Product>
+@{
+    Layout = "~/Views/Shared/_LayoutTemplateSubpage.cshtml";
+}
+
+
+<section id="product" >
+    <h2>Featured Products</h2>
+    <p>Summer collection new modern desing</p>
+    <div class="pro-container">
+    @foreach (var item in Model)
+    {
+            
+            <div class="pro">
+            <a href="Product/@item.ProductId" class="div-click">
+            <img src="~/Images/Products/@item.Image" alt="@item.ProductName" />
+            <div class="des">
+                <span>@item.Supplier.SupplierName</span>
+                <h5>@item.ProductName</h5>
+                <h4>@item.Prices VNĐ</h4>
+            </div>
+            </a>
+            <a asp-action="AddToCart" asp-route-id="@item.ProductId" asp-route-price="@item.Prices">Thêm vào giỏ hàng</a>
+        </div>
+        
+        
+    }
+    </div>
+
+    @*<h2>Featured Products</h2>
+    <p>Summer collection new modern desing</p>
+    <div class="pro-container">
+        <div class="pro">
+            <img src="~/Images/Products/chum-nho.jpg" alt=""/>
+            <div class="des">
+                <span>Adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <h4>10000VNĐ</h4>
+            </div>
+            <a href="#">Thêm vào giỏ hàng</a>
+        </div>
+    </div>*@
+
+</section>
+

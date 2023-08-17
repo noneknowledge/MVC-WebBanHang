@@ -5,6 +5,30 @@
       "PackagePath": "staticwebassets\\MVC_template.bundle.scp.css"
     },
     {
+      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\chum-nho.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\chum-nho.jpg"
+    },
+    {
+      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\mang-cau-gai.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\mang-cau-gai.jpg"
+    },
+    {
+      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\sapoche.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\sapoche.jpg"
+    },
+    {
+      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\sau-rieng.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\sau-rieng.jpg"
+    },
+    {
+      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\tao-tau.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\tao-tau.jpg"
+    },
+    {
+      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\tao-xanh.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\tao-xanh.jpg"
+    },
+    {
       "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\contact.html",
       "PackagePath": "staticwebassets\\Template\\contact.html"
     },
@@ -119,6 +143,10 @@
     {
       "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
       "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\favicon.ico",

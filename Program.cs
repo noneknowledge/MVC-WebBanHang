@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using MVC_template.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<QLWebBanHangContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ChuoiKetNoi"));
+});
+
 
 var app = builder.Build();
 
@@ -22,6 +30,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Show}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
