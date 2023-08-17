@@ -70,16 +70,16 @@ namespace MVC_template.Data
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.CustomerId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Order_Customer");
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>
             {
-                entity.ToTable("OrderDetail");
+                entity.HasKey(e => new { e.OrderId, e.ProductId })
+                    .HasName("PK_OrderDetail_1");
 
-                entity.Property(e => e.OrderDetailId)
-                    .HasMaxLength(50)
-                    .HasColumnName("OrderDetailID");
+                entity.ToTable("OrderDetail");
 
                 entity.Property(e => e.OrderId)
                     .HasMaxLength(50)
@@ -89,14 +89,20 @@ namespace MVC_template.Data
                     .HasMaxLength(50)
                     .HasColumnName("ProductID");
 
+                entity.Property(e => e.OrderDetailId)
+                    .HasMaxLength(50)
+                    .HasColumnName("OrderDetailID");
+
                 entity.HasOne(d => d.Order)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.OrderId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_OrderDetail_Order");
 
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.ProductId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_OrderDetail_Product");
             });
 

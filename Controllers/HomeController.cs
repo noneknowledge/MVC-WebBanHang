@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVC_template.Data;
 using MVC_template.Models;
 using System.Diagnostics;
 
@@ -8,10 +9,15 @@ namespace MVC_template.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly QLWebBanHangContext _context;
+        
+        public HomeController(ILogger<HomeController> logger,QLWebBanHangContext context)
         {
             _logger = logger;
-            GlobalValues.CustomerID = Guid.NewGuid().ToString();
+            _context= context;
+            var customer = _context.Customers.FirstOrDefault(a => a.CustomerId != null);
+            if (customer !=null)
+                GlobalValues.CustomerID = customer.CustomerId;
         }
 
         public IActionResult Index()

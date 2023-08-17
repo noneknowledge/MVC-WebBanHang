@@ -11,12 +11,12 @@ namespace MVC_template.Data
         }
 
         public string OrderId { get; set; } = null!;
-        public string PaymentMethod { get; set; } = null!;
+        public string? PaymentMethod { get; set; }
         public DateTime? OrderDate { get; set; }
-        public int AmountPaid { get; set; }
-        public string? CustomerId { get; set; }
+        public int? AmountPaid { get; set; }
+        public string CustomerId { get; set; } = null!;
 
-        public virtual Customer? Customer { get; set; }
+        public virtual Customer Customer { get; set; } = null!;
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

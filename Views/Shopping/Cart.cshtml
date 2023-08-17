@@ -1,0 +1,73 @@
+﻿@model IEnumerable<MVC_template.Data.ShoppingCart>
+
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_LayoutTemplateSubpage.cshtml";
+   
+}
+@if (TempData["alert"] != null)
+{
+    <div class="alert alert-success">
+        <strong>Success</strong> @TempData["alert"]
+    </div>
+}
+<h1>Cart</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tên sản phẩm
+            </th>
+            <th>Hình ảnh</th>
+            <th>
+                Số lượng
+            </th>
+            <th>
+                Giá tiền
+            </th>
+            <th>
+                Tổng tiền
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem=>item.Product.ProductName)
+            </td>
+            <td>
+                   <img src="~/Images/Products/@item.Product.Image" alt="@item.Product.ProductName" width="100px" height="100px" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+                
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+        </tr>
+        
+}
+    </tbody>
+</table>
+<div class="d-flex justify-content-end">
+    <h4>Giá tiền:  @ViewBag.Total </h4>
+</div>
+<div class="d-flex justify-content-end">
+    <button onclick="location.href='@Url.Action("AddToOrder","Shopping")'" type="button" class="btn btn-success" style="align-items:flex-end">Đặt hàng</button>
+</div>
+
+<h2 style="text-align:center">@ViewBag.Cart</h2>
+<a asp-action="Index" asp-controller="Shopping"><h2 style="text-align:center">@ViewBag.ButtonBuy</h2></a>

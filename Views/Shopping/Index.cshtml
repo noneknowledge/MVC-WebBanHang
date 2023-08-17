@@ -3,10 +3,16 @@
     Layout = "~/Views/Shared/_LayoutTemplateSubpage.cshtml";
 }
 
+@if (TempData["alert"] != null)
+{
+    <div class="alert alert-success">
+        <strong>Success</strong> @TempData["alert"]
+    </div>
+}
 
 <section id="product" >
-    <h2>Featured Products</h2>
-    <p>Summer collection new modern desing</p>
+    <h2>Các sản phẩm chính</h2>
+    <p>Đa dạng chủng loại trái cây nhiệt đới</p>
     <div class="pro-container">
     @foreach (var item in Model)
     {
@@ -42,4 +48,6 @@
     </div>*@
 
 </section>
+
+
 
