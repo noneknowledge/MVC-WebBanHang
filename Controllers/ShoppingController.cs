@@ -112,9 +112,13 @@ namespace MVC_template.Controllers
             return View(data);
         }
        
-        public IActionResult OrderDetail(string id)
+        public IActionResult OrderDetail(string id,int ordertotal)
         {
-            var data = _context.OrderDetails.Where(a => a.OrderId == id).ToList();
+            var data = _context.OrderDetails.Include(a=>a.Product).Include(a=>a.Order).Where(a => a.OrderId == id).ToList();
+            var orderInfo = data.FirstOrDefault(a => a.OrderId != null);
+            ViewBag.OrderDate = orderInfo.Order.OrderDate;
+            ViewBag.OrderId = id;
+            ViewBag.TotalOrder = ordertotal;
             return View(data);
         }
         
