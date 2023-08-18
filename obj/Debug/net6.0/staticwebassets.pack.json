@@ -1,387 +1,387 @@
 {
   "Files": [
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MVC_template.bundle.scp.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MVC_template.bundle.scp.css",
       "PackagePath": "staticwebassets\\MVC_template.bundle.scp.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\chum-nho.jpg",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\chum-nho.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\chum-nho.jpg"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\mang-cau-gai.jpg",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\mang-cau-gai.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\mang-cau-gai.jpg"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\sapoche.jpg",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\sapoche.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\sapoche.jpg"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\sau-rieng.jpg",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\sau-rieng.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\sau-rieng.jpg"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\tao-tau.jpg",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\tao-tau.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\tao-tau.jpg"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\tao-xanh.jpg",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\tao-xanh.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\tao-xanh.jpg"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\contact.html",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\contact.html",
       "PackagePath": "staticwebassets\\Template\\contact.html"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\Template\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\css\\responsive.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\css\\responsive.css",
       "PackagePath": "staticwebassets\\Template\\css\\responsive.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\css\\style.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\css\\style.css",
       "PackagePath": "staticwebassets\\Template\\css\\style.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\fruit.html",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\fruit.html",
       "PackagePath": "staticwebassets\\Template\\fruit.html"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\card-item-1.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\card-item-1.png",
       "PackagePath": "staticwebassets\\Template\\images\\card-item-1.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\card-item-2.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\card-item-2.png",
       "PackagePath": "staticwebassets\\Template\\images\\card-item-2.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\card-item-3.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\card-item-3.png",
       "PackagePath": "staticwebassets\\Template\\images\\card-item-3.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\client.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\client.png",
       "PackagePath": "staticwebassets\\Template\\images\\client.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\fb.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\fb.png",
       "PackagePath": "staticwebassets\\Template\\images\\fb.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\gauva.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\gauva.png",
       "PackagePath": "staticwebassets\\Template\\images\\gauva.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\grapes.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\grapes.png",
       "PackagePath": "staticwebassets\\Template\\images\\grapes.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\instagram.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\instagram.png",
       "PackagePath": "staticwebassets\\Template\\images\\instagram.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\linkedin.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\linkedin.png",
       "PackagePath": "staticwebassets\\Template\\images\\linkedin.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\logo.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\logo.png",
       "PackagePath": "staticwebassets\\Template\\images\\logo.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\menu.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\menu.png",
       "PackagePath": "staticwebassets\\Template\\images\\menu.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\next.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\next.png",
       "PackagePath": "staticwebassets\\Template\\images\\next.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\orange-dish.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\orange-dish.png",
       "PackagePath": "staticwebassets\\Template\\images\\orange-dish.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\orange.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\orange.png",
       "PackagePath": "staticwebassets\\Template\\images\\orange.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\prev.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\prev.png",
       "PackagePath": "staticwebassets\\Template\\images\\prev.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\search-icon.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\search-icon.png",
       "PackagePath": "staticwebassets\\Template\\images\\search-icon.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\slide-img.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\slide-img.png",
       "PackagePath": "staticwebassets\\Template\\images\\slide-img.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\tasty-image.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\tasty-image.png",
       "PackagePath": "staticwebassets\\Template\\images\\tasty-image.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\images\\twitter.png",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\images\\twitter.png",
       "PackagePath": "staticwebassets\\Template\\images\\twitter.png"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\index.html",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\index.html",
       "PackagePath": "staticwebassets\\Template\\index.html"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\js\\bootstrap.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\Template\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\js\\jquery-3.4.1.min.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\js\\jquery-3.4.1.min.js",
       "PackagePath": "staticwebassets\\Template\\js\\jquery-3.4.1.min.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Template\\service.html",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Template\\service.html",
       "PackagePath": "staticwebassets\\Template\\service.html"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\css\\style.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

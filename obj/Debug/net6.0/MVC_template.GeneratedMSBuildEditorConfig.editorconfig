@@ -9,97 +9,97 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MVC_template
 build_property.RootNamespace = MVC_template
-build_property.ProjectDir = D:\Desktop\Car-dealer\MVC_template\
+build_property.ProjectDir = C:\Users\Asus\Desktop\MVC_E-Commerce\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Desktop\Car-dealer\MVC_template
+build_property.MSBuildProjectDirectory = C:\Users\Asus\Desktop\MVC_E-Commerce
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Customers/Create.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Customers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Customers/Delete.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Customers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Customers/Details.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Customers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Customers/Edit.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Customers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Customers/Index.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Customers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Home/Index.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Home/Privacy.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Home/Show.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Home/Show.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Products/Create.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Products/Delete.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Products/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Products/Details.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Products/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Products/Edit.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Products/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Products/Index.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Shared/Error.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Shared/_LayoutTemplate.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Shared/_LayoutTemplate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRUZW1wbGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Shared/_LayoutTemplateSubpage.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Shared/_LayoutTemplateSubpage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRUZW1wbGF0ZVN1YnBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Shopping/Cart.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Shopping/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Shopping/Index.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Shopping/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/_ViewImports.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/_ViewStart.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Desktop/Car-dealer/MVC_template/Views/Shared/_Layout.cshtml]
+[C:/Users/Asus/Desktop/MVC_E-Commerce/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-vcbbcu8pwy
