@@ -11,7 +11,7 @@ namespace MVC_template.Data
             ShoppingCarts = new HashSet<ShoppingCart>();
         }
 
-        public string ProductId { get; set; } = null!;
+        public string? ProductId { get; set; } = null!;
         public string ProductName { get; set; } = null!;
         public string? ProductDescription { get; set; }
         public int? Quantity { get; set; }

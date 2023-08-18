@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "86zt/xeWM/4sblawprJOYaOsr6XpI25ang+Mb/CRx60=",
+  "Hash": "dWFG+p9IQlQXDfpv6TijeHbQfTxtxD5HmYEwUXcirYM=",
   "Source": "MVC_template",
   "BasePath": "_content/MVC_template",
   "Mode": "Default",
@@ -119,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\Products\\chum-nho.jpg"
     },
     {
+      "Identity": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\dau-da-lat.gif",
+      "SourceId": "MVC_template",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\",
+      "BasePath": "_content/MVC_template",
+      "RelativePath": "Images/Products/dau-da-lat.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\dau-da-lat.gif"
+    },
+    {
       "Identity": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\mang-cau-gai.jpg",
       "SourceId": "MVC_template",
       "SourceType": "Discovered",
@@ -134,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Products\\mang-cau-gai.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\mit-to-nu.webp",
+      "SourceId": "MVC_template",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\",
+      "BasePath": "_content/MVC_template",
+      "RelativePath": "Images/Products/mit-to-nu.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\mit-to-nu.webp"
     },
     {
       "Identity": "C:\\Users\\Asus\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\sapoche.jpg",

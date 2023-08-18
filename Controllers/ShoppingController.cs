@@ -111,6 +111,13 @@ namespace MVC_template.Controllers
             var data = _context.Orders.Where(a => a.CustomerId == GlobalValues.CustomerID).ToList();
             return View(data);
         }
+       
+        public IActionResult OrderDetail(string id)
+        {
+            var data = _context.OrderDetails.Where(a => a.OrderId == id).ToList();
+            return View(data);
+        }
+        
 
     }
 }
