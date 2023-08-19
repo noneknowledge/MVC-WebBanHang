@@ -56,20 +56,12 @@ namespace MVC_template.Controllers
                 ViewBag.Cart = "Chưa có sẳn phẩm nào trong giỏ hàng";
                 ViewBag.ButtonBuy = "Mua ngay";
             }
-            else
-            {
-                
-                foreach (var item in data)
-                {
-                   total += item.Total;
-                }
-            }
-            ViewBag.Total = total;
+            
             return View(data);
         }
         public IActionResult AddToOrder()
         {
-            int? OrderTotal = 0;
+           
             var order = new Order();
             order.OrderId = Guid.NewGuid().ToString();  
             order.OrderDate = DateTime.Now.Date;
@@ -85,17 +77,14 @@ namespace MVC_template.Controllers
                 OrderDetail.Unit= item.Unit;
                 OrderDetail.ProductId= item.ProductId;
                 OrderDetail.OrderId = order.OrderId;
-                OrderTotal += item.Total;
+                
 
                 _context.Remove(item);
                 _context.SaveChanges();
                 _context.Add(OrderDetail);
                 _context.SaveChanges();
             }
-            order.AmountPaid = OrderTotal;
-            
-            
-            
+            order.AmountPaid = data.Sum(a=>a.Total); 
             
             _context.Update(order);
             _context.SaveChanges();
