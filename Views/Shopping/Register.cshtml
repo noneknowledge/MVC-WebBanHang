@@ -1,0 +1,71 @@
+﻿@model RegisterVM
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_LayoutTemplateSubpage.cshtml";
+}
+
+
+
+<h1>Register</h1>
+<section class="vh-100 bg-image"
+         style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+                            <h2 class="text-uppercase text-center mb-5">Tạo tài khoản</h2>
+
+                            <form method="post" asp-action="register" asp-controller="Shopping">
+
+                                <div class="form-outline mb-4">
+                                    <input asp-for=LastName type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                                    <label class="form-label" for="form3Example1cg">Họ</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input asp-for=FirstName type="text" id="form3Example3cg" class="form-control form-control-lg" />
+                                    <label class="form-label" for="form3Example3cg">Tên</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input asp-for=Address type="text" id="form3Example4cg" class="form-control form-control-lg" />
+                                    <label class="form-label" for="form3Example4cg">Địa chỉ</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input asp-for=PhoneNumber type="text" id="form3Example4cg" class="form-control form-control-lg" />
+                                    <label class="form-label" for="form3Example4cg">Số điện thoại</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input asp-for=UserName type="text" id="form3Example4cg" class="form-control form-control-lg" />
+                                    <label class="form-label" for="form3Example4cg">Tên tài khoản</label>
+                                    <span asp-validation-for="UserName" class="text-danger"></span>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input asp-for=PassWord type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                                    <label class="form-label" for="form3Example4cg">Mật khẩu</label>
+                                </div>
+
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" onclick=""
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                                        Đăng ký
+                                    </button>
+                                </div>
+
+                                <p class="text-center text-muted mt-5 mb-0">
+                                    Đã có tài khoản <a  asp-controller="Shopping" asp-action="Login"
+                                                                class="fw-bold text-body"><u>Đăng nhập tại đây</u></a>
+                                </p>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

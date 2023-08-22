@@ -53,9 +53,9 @@
                 
             </td>
             <td>
-                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                <a href="/product/@item.ProductId">Chỉnh sửa</a>|
+                <a asp-action="Delete" asp-route-id="@item.ProductId">Xóa</a>
+               
             </td>
         </tr>
         

@@ -19,6 +19,61 @@ namespace MVC_template.Controllers
             return View(data);
         }
 
+        public IActionResult Login() 
+        { 
+
+            return View();
+        }
+
+        [HttpGet]        
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult Register(RegisterVM account)
+        {
+            var customer = new Customer
+            {
+                CustomerId = Guid.NewGuid().ToString(),
+                FirstName = account.FirstName,
+                LastName = account.LastName,    
+                PhoneNumber= account.PhoneNumber,
+                Address = account.Address,
+            };
+
+            _context.Add(customer);
+            _context.SaveChanges();
+
+
+            var userlogin = new UserLogin
+            {
+                UserName= account.UserName,
+                PassWord= account.PassWord,
+                VaiTro = "customer",
+                CustomerId = customer.CustomerId,
+            };
+            _context.Add(userlogin);
+            _context.SaveChanges();
+
+
+            return View();
+        }
+
+        public IActionResult Delete(string id)
+        {
+            var product = _context.ShoppingCarts.FirstOrDefault(a => a.ProductId == id && a.CustomerId == GlobalValues.CustomerID);
+            if (product == null)
+            {
+                return View("Error");
+            }
+            _context.ShoppingCarts.Remove(product);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Cart));
+        }
+
         [HttpGet("/Product/{id}")]
         public IActionResult ProductDetail(string id)
         {
@@ -32,7 +87,7 @@ namespace MVC_template.Controllers
             return View(data);
         }
 
-        public IActionResult AddToCart(string id,int price)
+        public IActionResult AddToCart(string id,int price,int quantity=1)
         {
 
             var cartItem = _context.ShoppingCarts.SingleOrDefault(a => a.ProductId == id && a.CustomerId == GlobalValues.CustomerID);
@@ -42,7 +97,7 @@ namespace MVC_template.Controllers
                 var newItem = new ShoppingCart();
                 newItem.ProductId = id;
                 newItem.CustomerId = GlobalValues.CustomerID;
-                newItem.Quantity = 1;
+                newItem.Quantity = quantity;
                 newItem.Unit = price;
                 newItem.Total = price * newItem.Quantity;
                 _context.Add(newItem);
@@ -50,7 +105,7 @@ namespace MVC_template.Controllers
             }
             else
             {
-                cartItem.Quantity += 1;
+                cartItem.Quantity = quantity;
                 cartItem.Total = price * cartItem.Quantity;
                 _context.Update(cartItem);
                 _context.SaveChanges();
