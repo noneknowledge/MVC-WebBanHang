@@ -5,6 +5,9 @@
     padding: 40px 80px;
 }
 
+
+
+/*Display product section*/
 #product{
     text-align:center;
 }
@@ -48,3 +51,5 @@ box-shadow: 20px 20px 30px rgba(0,0,0,0,0.06);
     text-decoration:none;
     color:black;
 }
+/*End display product section*/
+

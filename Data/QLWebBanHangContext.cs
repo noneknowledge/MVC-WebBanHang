@@ -22,6 +22,7 @@ namespace MVC_template.Data
         public virtual DbSet<Product> Products { get; set; } = null!;
         public virtual DbSet<ShoppingCart> ShoppingCarts { get; set; } = null!;
         public virtual DbSet<Supplier> Suppliers { get; set; } = null!;
+        public virtual DbSet<UserLogin> UserLogins { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -59,6 +60,8 @@ namespace MVC_template.Data
                     .HasMaxLength(50)
                     .HasColumnName("OrderID");
 
+                entity.Property(e => e.Address).HasMaxLength(255);
+
                 entity.Property(e => e.CustomerId)
                     .HasMaxLength(50)
                     .HasColumnName("CustomerID");
@@ -66,6 +69,8 @@ namespace MVC_template.Data
                 entity.Property(e => e.OrderDate).HasColumnType("date");
 
                 entity.Property(e => e.PaymentMethod).HasMaxLength(50);
+
+                entity.Property(e => e.Phone).HasMaxLength(11);
 
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.Orders)
@@ -116,9 +121,9 @@ namespace MVC_template.Data
 
                 entity.Property(e => e.Image).HasMaxLength(255);
 
-                entity.Property(e => e.ProductDescription).HasMaxLength(50);
+                entity.Property(e => e.ProductDescription).HasMaxLength(255);
 
-                entity.Property(e => e.ProductName).HasMaxLength(50);
+                entity.Property(e => e.ProductName).HasMaxLength(255);
 
                 entity.Property(e => e.SupplierId)
                     .HasMaxLength(50)
@@ -169,6 +174,34 @@ namespace MVC_template.Data
                 entity.Property(e => e.Description).HasMaxLength(255);
 
                 entity.Property(e => e.SupplierName).HasMaxLength(255);
+            });
+
+            modelBuilder.Entity<UserLogin>(entity =>
+            {
+                entity.HasKey(e => e.Uid);
+
+                entity.ToTable("UserLogin");
+
+                entity.Property(e => e.Uid).HasColumnName("UID");
+
+                entity.Property(e => e.CustomerId)
+                    .HasMaxLength(50)
+                    .HasColumnName("CustomerID");
+
+                entity.Property(e => e.PassWord)
+                    .HasMaxLength(255)
+                    .IsFixedLength();
+
+                entity.Property(e => e.UserName)
+                    .HasMaxLength(255)
+                    .IsFixedLength();
+
+                entity.Property(e => e.VaiTro).HasMaxLength(50);
+
+                entity.HasOne(d => d.Customer)
+                    .WithMany(p => p.UserLogins)
+                    .HasForeignKey(d => d.CustomerId)
+                    .HasConstraintName("FK_UserLogin_Customer");
             });
 
             OnModelCreatingPartial(modelBuilder);

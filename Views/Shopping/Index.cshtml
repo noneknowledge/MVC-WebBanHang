@@ -10,13 +10,12 @@
     </div>
 }
 
-<section id="product" >
+@*<section id="product" >
     <h2>Các sản phẩm chính</h2>
     <p>Đa dạng chủng loại trái cây nhiệt đới</p>
     <div class="pro-container">
     @foreach (var item in Model)
     {
-            
             <div class="pro">
             <a href="Product/@item.ProductId" class="div-click">
             <img src="~/Images/Products/@item.Image" alt="@item.ProductName" />
@@ -33,21 +32,8 @@
     }
     </div>
 
-    @*<h2>Featured Products</h2>
-    <p>Summer collection new modern desing</p>
-    <div class="pro-container">
-        <div class="pro">
-            <img src="~/Images/Products/chum-nho.jpg" alt=""/>
-            <div class="des">
-                <span>Adidas</span>
-                <h5>Cartoon Astronaut T-Shirts</h5>
-                <h4>10000VNĐ</h4>
-            </div>
-            <a href="#">Thêm vào giỏ hàng</a>
-        </div>
-    </div>*@
-
-</section>
+</section>*@
+@await Html.PartialAsync("PartialViewProduct")
 
 
 

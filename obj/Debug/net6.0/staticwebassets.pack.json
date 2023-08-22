@@ -9,8 +9,16 @@
       "PackagePath": "staticwebassets\\Images\\Products\\chum-nho.jpg"
     },
     {
+      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\dau-da-lat.gif",
+      "PackagePath": "staticwebassets\\Images\\Products\\dau-da-lat.gif"
+    },
+    {
       "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\mang-cau-gai.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\mang-cau-gai.jpg"
+    },
+    {
+      "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\mit-to-nu.webp",
+      "PackagePath": "staticwebassets\\Images\\Products\\mit-to-nu.webp"
     },
     {
       "Id": "D:\\Desktop\\Car-dealer\\MVC_template\\wwwroot\\Images\\Products\\sapoche.jpg",

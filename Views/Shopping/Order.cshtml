@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MVC_template.Data.Order>
+
+@{
+    ViewData["Title"] = "Order";
+    Layout = "~/Views/Shared/_LayoutTemplateSubpage.cshtml";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID đơn hàng
+            </th>
+            <th>
+                Ngày đặt hàng
+            </th>
+            <th>
+                Tổng tiền đơn hàng
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPaid) VNĐ
+            </td>
+            <td>
+                <a asp-action="OrderDetail" asp-controller="Shopping" asp-route-ordertotal="@item.AmountPaid" asp-route-id="@item.OrderId">Details</a> |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+
+

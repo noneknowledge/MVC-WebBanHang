@@ -1,0 +1,73 @@
+﻿@model IEnumerable<MVC_template.Data.OrderDetail>
+@{
+    ViewData["Title"] = "OrderDetail";
+    Layout = "~/Views/Shared/_LayoutTemplateSubpage.cshtml";
+}
+
+<h1>OrderDetail</h1>
+
+<section class="vh-200 gradient-custom-2">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-10 col-lg-8 col-xl-6">
+                <div class="card card-stepper" style="border-radius: 16px;">
+                    <div class="card-header p-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <p class="text-muted mb-2">Order ID:<span class="fw-bold text-body"> @ViewBag.OrderID </span></p>
+                                <p class="text-muted mb-0">Order Date: <span class="fw-bold text-body">@ViewBag.OrderDate</span> </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    @foreach (var item in Model)
+                    {
+                       
+                        <div class="card-body p-4">
+                            <div class="d-flex flex-row mb-4 pb-2">
+                                <div class="flex-fill">
+                                    <h5 class="bold">@item.Product.ProductName</h5>
+                                    <p class="text-muted">Số lượng: @item.Quantity Kg</p>
+                                    <h4 class="mb-3"> Đơn giá: @item.Total VNĐ <br /><span class="small text-muted"> @item.Unit VNĐ/1 Kg </span></h4>
+                                </div>
+                                <div>
+                                    <img class="align-self-center img-fluid"
+                                         src="~/Images/Products/@item.Product.Image" height="250" width="250">
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    }
+                    <div class="card-footer p-4">
+                        <div class="d-flex justify-content-between">
+                            <h5>Tổng tiền: @ViewBag.TotalOrder VNĐ</h5>
+                            <h5 class="fw-normal mb-0"><a asp-controller="Shopping" asp-action="Order">Quay lại</a></h5>
+                        </div>
+                    </div>
+                    
+                    @*<div class="card-body p-4">
+                        <div class="d-flex flex-row mb-4 pb-2">
+                            <div class="flex-fill">
+                                <h5 class="bold">Headphones Bose 35 II</h5>
+                                <p class="text-muted"> Qt: 1 item</p>
+                                <h4 class="mb-3"> $ 299 <span class="small text-muted"> via (COD) </span></h4>
+                            </div>
+                            <div>
+                                <img class="align-self-center img-fluid"
+                                     src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/6.webp" width="250">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card-footer p-4">
+                        <div class="d-flex justify-content-center">
+                            <h5 class="fw-normal mb-0"><a asp-controller="Shopping" asp-action="Order">Quay lại</a></h5>                          
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

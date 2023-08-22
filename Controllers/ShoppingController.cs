@@ -18,6 +18,20 @@ namespace MVC_template.Controllers
             var data = _context.Products.Include(a => a.Supplier).ToList();
             return View(data);
         }
+
+        [HttpGet("/Product/{id}")]
+        public IActionResult ProductDetail(string id)
+        {
+            var data = _context.Products.Where(a=>a.ProductId== id);
+            if (data.Count() == 0)
+            {
+                ViewBag.ChiTiet = "Không tìm thấy sản phẩm";
+                return View(data);
+            }
+
+            return View(data);
+        }
+
         public IActionResult AddToCart(string id,int price)
         {
 
@@ -50,26 +64,21 @@ namespace MVC_template.Controllers
         public IActionResult Cart()
         {
             var data = _context.ShoppingCarts.Include(a => a.Product).Where(a=>a.CustomerId== GlobalValues.CustomerID).ToList();
-            int? total = 0;
+            
             if (data.Count() == 0) 
             {
                 ViewBag.Cart = "Chưa có sẳn phẩm nào trong giỏ hàng";
                 ViewBag.ButtonBuy = "Mua ngay";
             }
-            else
-            {
-                
-                foreach (var item in data)
-                {
-                   total += item.Total;
-                }
-            }
-            ViewBag.Total = total;
+            
             return View(data);
         }
+
+        
+
         public IActionResult AddToOrder()
         {
-            int? OrderTotal = 0;
+           
             var order = new Order();
             order.OrderId = Guid.NewGuid().ToString();  
             order.OrderDate = DateTime.Now.Date;
@@ -85,17 +94,13 @@ namespace MVC_template.Controllers
                 OrderDetail.Unit= item.Unit;
                 OrderDetail.ProductId= item.ProductId;
                 OrderDetail.OrderId = order.OrderId;
-                OrderTotal += item.Total;
 
                 _context.Remove(item);
                 _context.SaveChanges();
                 _context.Add(OrderDetail);
                 _context.SaveChanges();
             }
-            order.AmountPaid = OrderTotal;
-            
-            
-            
+            order.AmountPaid = data.Sum(a=>a.Total); 
             
             _context.Update(order);
             _context.SaveChanges();
@@ -111,6 +116,17 @@ namespace MVC_template.Controllers
             var data = _context.Orders.Where(a => a.CustomerId == GlobalValues.CustomerID).ToList();
             return View(data);
         }
+       
+        public IActionResult OrderDetail(string id,int ordertotal)
+        {
+            var data = _context.OrderDetails.Include(a=>a.Product).Include(a=>a.Order).Where(a => a.OrderId == id).ToList();
+            var orderInfo = data.FirstOrDefault(a => a.OrderId != null);
+            ViewBag.OrderDate = orderInfo.Order.OrderDate.Value.ToLongDateString();
+            ViewBag.OrderId = id;
+            ViewBag.TotalOrder = ordertotal;
+            return View(data);
+        }
+        
 
     }
 }

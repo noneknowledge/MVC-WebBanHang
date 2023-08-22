@@ -43,7 +43,7 @@
                    <img src="~/Images/Products/@item.Product.Image" alt="@item.Product.ProductName" width="100px" height="100px" />
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Quantity)
+                @Html.DisplayFor(modelItem => item.Quantity) Kg
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Unit)
@@ -63,7 +63,7 @@
     </tbody>
 </table>
 <div class="d-flex justify-content-end">
-    <h4>Giá tiền:  @ViewBag.Total </h4>
+    <h4>Giá tiền:  @Model.Sum(a=>a.Total) VNĐ</h4>
 </div>
 <div class="d-flex justify-content-end">
     <button onclick="location.href='@Url.Action("AddToOrder","Shopping")'" type="button" class="btn btn-success" style="align-items:flex-end">Đặt hàng</button>

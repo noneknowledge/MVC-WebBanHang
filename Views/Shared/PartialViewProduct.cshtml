@@ -1,0 +1,23 @@
+﻿<section id="product">
+    <h2>Các sản phẩm chính</h2>
+    <p>Đa dạng chủng loại trái cây nhiệt đới</p>
+    <div class="pro-container">
+        @foreach (var item in Model)
+        {
+            <div class="pro">
+                <a href="Product/@item.ProductId" class="div-click">
+                    <img src="~/Images/Products/@item.Image" alt="@item.ProductName" />
+                    <div class="des">
+                        <span>@item.Supplier.SupplierName</span>
+                        <h5>@item.ProductName</h5>
+                        <h4>@item.Prices VNĐ</h4>
+                    </div>
+                </a>
+                <a asp-action="AddToCart" asp-route-id="@item.ProductId" asp-route-price="@item.Prices">Thêm vào giỏ hàng</a>
+            </div>
+
+
+        }
+    </div>
+
+</section>
