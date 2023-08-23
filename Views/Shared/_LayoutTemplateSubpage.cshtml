@@ -28,14 +28,15 @@
   <!-- responsive style -->
   <link href="~/Template/css/responsive.css" rel="stylesheet" />
 </head>
+
 <body>
     <div class="hero_area sub_pages">
         <!-- header section strats -->
         <header class="header_section">
             <div class="container">
                 <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-                    <a class="navbar-brand"  asp-action="Index" asp-controller="Home">
-                        <img src="images/logo.png" alt="" /><span>
+                    <a class="navbar-brand"  asp-action="Home" asp-controller="Shopping">
+                        <span>
                             Linh Group
                         </span>
                     </a>
@@ -48,7 +49,7 @@
                         <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
                             <ul class="navbar-nav  ">
                                 <li class="nav-item active">
-                                    <a class="nav-link" asp-action="Index" asp-controller="Home">Trang chủ <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" asp-action="Home" asp-controller="Shopping">Trang chủ <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" asp-action="Index" asp-controller="Shopping"> Mua sắm </a>
@@ -58,7 +59,7 @@
                                     <a class="nav-link" asp-action="Order" asp-controller="Shopping">Đơn hàng </a>
                                 </li>
                             </ul>
-                            <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                            <form method="get" asp-action="Search" asp-controller="Shopping" class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
                             </form>
                         </div>
@@ -70,7 +71,7 @@
                         @if (GlobalValues.CustomerID == null)
                         {
                             <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
-                                <a asp-action="Cart" asp-controller="Shopping">
+                                <a asp-action="Login" asp-controller="Shopping">
                                     Đăng nhập
                                 </a>
                             </div>
@@ -78,7 +79,7 @@
                         else
                         {
                             <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
-                                <a asp-action="Cart" asp-controller="Shopping">
+                                <a asp-action="Logout" asp-controller="Shopping">
                                     Đăng xuất
                                 </a>
                             </div>
@@ -94,8 +95,11 @@
             @RenderBody()
         </main>
     </div>
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/Template/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="~/Template/js/bootstrap.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 
 </body>
 </html>

@@ -15,9 +15,7 @@ namespace MVC_template.Controllers
         {
             _logger = logger;
             _context= context;
-            var customer = _context.Customers.FirstOrDefault(a => a.CustomerId != null);
-            if (customer !=null)
-                GlobalValues.CustomerID = customer.CustomerId;
+            
         }
 
         public IActionResult Index()

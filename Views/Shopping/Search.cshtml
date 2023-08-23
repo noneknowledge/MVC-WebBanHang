@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_LayoutTemplateSubpage.cshtml";
+}
+
+<div class="form-outline mb-4">
+  <input type="search" class="form-control" id="datatable-search-input">
+  <label class="form-label" for="datatable-search-input">Search</label>
+</div>
+<div id="datatable">
+</div>
+
+@section Scripts{
+    <script>
+        $(function (){
+            $("#datatable-search-input").keyup(function (v){
+                console.log(v);
+                if ($(this).val().length %2 == 0) return;
+                $.ajax({
+                    url: "/Shopping/Search",
+                    type: "POST",
+                    data: {
+                        keyword: $(this).val()
+                    },
+                    success: function(res){
+                        $("#datatable").html(res)
+                    },
+                    error: function (xhr,textStatus,error){
+                        alert(xhr.statusText);
+                    }
+                });
+            });
+        });
+        
+    </script>
+}
+

@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using MVC_template.Data;
 using MVC_template.Models;
+using System.Text.RegularExpressions;
 using System.Xml.Schema;
 
 namespace MVC_template.Controllers
@@ -13,16 +15,40 @@ namespace MVC_template.Controllers
         {
             _context = context;
         }
+        public IActionResult Home()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             var data = _context.Products.Include(a => a.Supplier).ToList();
             return View(data);
         }
-
+        [HttpGet]
         public IActionResult Login() 
         { 
 
             return View();
+        }
+        [HttpPost]
+        public IActionResult Login(Login model)
+        {
+            var userlogin = _context.UserLogins.FirstOrDefault(a=>a.UserName== model.UserName && a.PassWord == model.PassWord);
+            if (userlogin==null)
+            {
+                ViewBag.ThongBao = "Sai tài khoản hoặc mật khẩu";
+                return View();
+            }
+            GlobalValues.CustomerID = userlogin.CustomerId;
+            GlobalValues.VaiTro = userlogin.VaiTro;
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult Logout() 
+        {
+            GlobalValues.logOut();
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]        
@@ -35,6 +61,27 @@ namespace MVC_template.Controllers
         [HttpPost]
         public IActionResult Register(RegisterVM account)
         {
+            string strRegex = @"0[3789][0-9]{8}";
+            Regex re = new Regex(strRegex);
+            int a;
+            if (account.LastName== null || account.UserName == null || account.FirstName == null || account.Address == null || account.PassWord ==null)
+            {
+                ViewBag.Validate = "Không được để trống trường nào";
+                return View();
+                
+            }
+            else if (!int.TryParse(account.PhoneNumber,out a))
+            {
+                ViewBag.Validate = "Số điện thoại phải là số";
+                return View();
+            }
+            else if (account.PhoneNumber.Length >11 || account.PhoneNumber.Length <10)
+            {
+                ViewBag.Validate = "Số điện thoại tối đa là 11 số và tối thiểu là 10 số";
+                return View();
+            } 
+           
+            
             var customer = new Customer
             {
                 CustomerId = Guid.NewGuid().ToString(),
@@ -58,9 +105,24 @@ namespace MVC_template.Controllers
             _context.Add(userlogin);
             _context.SaveChanges();
 
-
+            ViewBag.Validate = "Tạo tài khoản thành công";
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Search()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Search(string keyword)
+        {
+            var data = _context.Products.Include(a=>a.Supplier).Where(a=>a.ProductName.Contains(keyword)).ToList();
+
+            return PartialView("PartialViewProduct",data);
+        }
+
 
         public IActionResult Delete(string id)
         {
@@ -89,6 +151,11 @@ namespace MVC_template.Controllers
 
         public IActionResult AddToCart(string id,int price,int quantity=1)
         {
+            if (GlobalValues.CustomerID== null) 
+            {
+                TempData["alert"] = "Vui lòng đăng nhập để mua hàng";
+                return RedirectToAction("Index");
+            }
 
             var cartItem = _context.ShoppingCarts.SingleOrDefault(a => a.ProductId == id && a.CustomerId == GlobalValues.CustomerID);
             
@@ -133,14 +200,25 @@ namespace MVC_template.Controllers
 
         public IActionResult AddToOrder()
         {
-           
+            if (GlobalValues.CustomerID == null)
+            {
+                return RedirectToAction("Login", "Shopping");
+            }    
+            
+            var data = _context.ShoppingCarts.Where(a=>a.CustomerId == GlobalValues.CustomerID).ToList();
+            if (data.Count() == 0)
+            {
+                TempData["alert"] = "Trong giỏ chưa có sản phẩm nào";
+                return View("Cart");
+            }    
+                
+
             var order = new Order();
-            order.OrderId = Guid.NewGuid().ToString();  
+            order.OrderId = Guid.NewGuid().ToString();
             order.OrderDate = DateTime.Now.Date;
             order.CustomerId = GlobalValues.CustomerID;
             _context.Add(order);
             _context.SaveChanges();
-            var data = _context.ShoppingCarts.Where(a=>a.CustomerId == GlobalValues.CustomerID).ToList();
             foreach (var item in data)
             {
                 var OrderDetail = new OrderDetail();

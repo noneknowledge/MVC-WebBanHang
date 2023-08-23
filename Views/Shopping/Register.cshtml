@@ -5,7 +5,12 @@
     Layout = "~/Views/Shared/_LayoutTemplateSubpage.cshtml";
 }
 
-
+@if (ViewBag.Validate != null)
+{
+    <div class="alert alert-success">
+        <strong>Thông báo</strong> @ViewBag.Validate
+    </div>
+}
 
 <h1>Register</h1>
 <section class="vh-100 bg-image"
@@ -18,33 +23,39 @@
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Tạo tài khoản</h2>
 
-                            <form method="post" asp-action="register" asp-controller="Shopping">
+                            <form id="myform" method="post" asp-action="register" asp-controller="Shopping">
 
                                 <div class="form-outline mb-4">
-                                    <input asp-for=LastName type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                                    <input name="lastName" asp-for=LastName type="text" id="form3Example1cg" class="form-control form-control-lg" />
                                     <label class="form-label" for="form3Example1cg">Họ</label>
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input asp-for=FirstName type="text" id="form3Example3cg" class="form-control form-control-lg" />
+                                    <input name="firstName" asp-for=FirstName type="text" id="form3Example3cg" class="form-control form-control-lg" />
                                     <label class="form-label" for="form3Example3cg">Tên</label>
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
                                 </div>
                                 <div class="form-outline mb-4">
-                                    <input asp-for=Address type="text" id="form3Example4cg" class="form-control form-control-lg" />
+                                    <input name="address" asp-for=Address type="text" id="form3Example4cg" class="form-control form-control-lg" />
                                     <label class="form-label" for="form3Example4cg">Địa chỉ</label>
+                                    <span asp-validation-for="Address" class="text-danger"></span>
                                 </div>
                                 <div class="form-outline mb-4">
-                                    <input asp-for=PhoneNumber type="text" id="form3Example4cg" class="form-control form-control-lg" />
+                                    <input name="phoneNumber" asp-for=PhoneNumber type="text" id="form3Example4cg" class="form-control form-control-lg" />
                                     <label class="form-label" for="form3Example4cg">Số điện thoại</label>
+                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <input asp-for=UserName type="text" id="form3Example4cg" class="form-control form-control-lg" />
                                     <label class="form-label" for="form3Example4cg">Tên tài khoản</label>
                                     <span asp-validation-for="UserName" class="text-danger"></span>
+
                                 </div>
                                 <div class="form-outline mb-4">
                                     <input asp-for=PassWord type="password" id="form3Example4cg" class="form-control form-control-lg" />
                                     <label class="form-label" for="form3Example4cg">Mật khẩu</label>
+                                    <span asp-validation-for="PassWord" class="text-danger"></span>
                                 </div>
 
                                 <div class="d-flex justify-content-center">
@@ -68,4 +79,5 @@
         </div>
     </div>
 </section>
+
 
