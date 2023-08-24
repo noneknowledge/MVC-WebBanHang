@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vAqqKMlDB7LdIC+Pky5GXi+NAbHm+eP7eq0LcOwA/01JHQuyivcfhe4mfbdh/jxzGNqmvU+llDDSOzOti5U2/w==",
+  "dgSpecHash": "YrJSNzfXtiQF8daGvuhMO8QeAsKtxzkET/pyTl6hnjlwvGaLMXX+gFv6oBUn7PiOqQ0QWQAF5xkoV4jp/796iw==",
   "success": true,
-  "projectFilePath": "D:\\Desktop\\Car-dealer\\MVC_template\\MVC_template.csproj",
+  "projectFilePath": "D:\\Desktop\\MVC_E-Commerce\\MVC_template.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

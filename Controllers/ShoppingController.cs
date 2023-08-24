@@ -19,6 +19,16 @@ namespace MVC_template.Controllers
         {
             return View();
         }
+
+        public Boolean CheckQuantity(string productID, int quantity)
+        {
+            var product = _context.Products.FirstOrDefault(a=>a.ProductId== productID);
+            if (product == null)
+            { return false; }
+            if (product.Quantity < quantity) { return false; }
+            return true;
+        }
+
         public IActionResult Index()
         {
             var data = _context.Products.Include(a => a.Supplier).ToList();
@@ -205,7 +215,15 @@ namespace MVC_template.Controllers
                 return RedirectToAction("Login", "Shopping");
             }    
             
-            var data = _context.ShoppingCarts.Where(a=>a.CustomerId == GlobalValues.CustomerID).ToList();
+            var data = _context.ShoppingCarts.Include(a=>a.Product).Where(a=>a.CustomerId == GlobalValues.CustomerID).ToList();
+            foreach (var item in data)
+            {
+                if (CheckQuantity(item.ProductId,item.Quantity.Value) == false)
+                {
+                    TempData["alert"] = "Sản phẩm: " + item.Product.ProductName + " đã hết số lượng bạn cần";
+                    return View("Cart");
+                }
+            }
             if (data.Count() == 0)
             {
                 TempData["alert"] = "Trong giỏ chưa có sản phẩm nào";
@@ -221,12 +239,16 @@ namespace MVC_template.Controllers
             _context.SaveChanges();
             foreach (var item in data)
             {
+                var productQuantity = _context.Products.FirstOrDefault(a => a.ProductId == item.ProductId);
                 var OrderDetail = new OrderDetail();
                 OrderDetail.Quantity = item.Quantity;
                 OrderDetail.Total = item.Total;
                 OrderDetail.Unit= item.Unit;
                 OrderDetail.ProductId= item.ProductId;
                 OrderDetail.OrderId = order.OrderId;
+
+                productQuantity.Quantity -= item.Quantity;
+                _context.Update(productQuantity);
 
                 _context.Remove(item);
                 _context.SaveChanges();

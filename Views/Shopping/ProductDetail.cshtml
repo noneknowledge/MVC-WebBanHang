@@ -13,13 +13,14 @@
                     <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="~/Images/Products/@item.Image" alt="@item.ProductName" /></div>
                     <div class="col-md-6">
                         <div class="small mb-1">SKU: BST-498</div>
+                        <div class="small mb-1">Số lượng còn lại: @item.Quantity Kg</div>
                         <h1 class="display-5 fw-bolder">@item.ProductName</h1>
                         <div class="fs-5 mb-5">
                             <span>@item.Prices Vnđ</span>
                         </div>
                         <p class="lead">@item.ProductDescription</p>
                         <div class="d-flex">
-                            <input name="quantity" class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 3rem" />
+                            <input name="quantity" class="form-control text-center me-3" min="1" max="@item.Quantity" id="inputQuantity" type="number" value="1" style="max-width: 3rem" />
 
                             <button class="btn btn-outline-dark flex-shrink-0">
                                 <i class="bi-cart-fill me-1"></i>

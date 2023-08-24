@@ -59,8 +59,7 @@ namespace MVC_template.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescription,Quantity,Prices,SupplierId,Image")] Product product,IFormFile ProductImage)
         {
-            if (ModelState.IsValid)
-            {
+            
                 if (ProductImage != null)
                 {
                     //upload và cập nhật field Logo
@@ -70,9 +69,7 @@ namespace MVC_template.Controllers
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
-            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
-            return View(product);
+            
         }
 
         // GET: Products/Edit/5

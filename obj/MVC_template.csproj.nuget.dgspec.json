@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desktop\\Car-dealer\\MVC_template\\MVC_template.csproj": {}
+    "D:\\Desktop\\MVC_E-Commerce\\MVC_template.csproj": {}
   },
   "projects": {
-    "D:\\Desktop\\Car-dealer\\MVC_template\\MVC_template.csproj": {
+    "D:\\Desktop\\MVC_E-Commerce\\MVC_template.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desktop\\Car-dealer\\MVC_template\\MVC_template.csproj",
+        "projectUniqueName": "D:\\Desktop\\MVC_E-Commerce\\MVC_template.csproj",
         "projectName": "MVC_template",
-        "projectPath": "D:\\Desktop\\Car-dealer\\MVC_template\\MVC_template.csproj",
+        "projectPath": "D:\\Desktop\\MVC_E-Commerce\\MVC_template.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Desktop\\Car-dealer\\MVC_template\\obj\\",
+        "outputPath": "D:\\Desktop\\MVC_E-Commerce\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
