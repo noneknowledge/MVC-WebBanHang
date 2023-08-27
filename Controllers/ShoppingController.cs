@@ -17,6 +17,7 @@ namespace MVC_template.Controllers
         }
         public IActionResult Home()
         {
+          
             return View();
         }
 

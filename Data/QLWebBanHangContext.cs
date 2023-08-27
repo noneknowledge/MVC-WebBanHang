@@ -121,9 +121,15 @@ namespace MVC_template.Data
 
                 entity.Property(e => e.Image).HasMaxLength(255);
 
+                entity.Property(e => e.IsHide)
+                    .HasMaxLength(10)
+                    .IsFixedLength();
+
                 entity.Property(e => e.ProductDescription).HasMaxLength(255);
 
                 entity.Property(e => e.ProductName).HasMaxLength(255);
+
+                entity.Property(e => e.Stt).HasColumnName("STT");
 
                 entity.Property(e => e.SupplierId)
                     .HasMaxLength(50)

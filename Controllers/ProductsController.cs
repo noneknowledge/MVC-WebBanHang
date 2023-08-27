@@ -65,6 +65,8 @@ namespace MVC_template.Controllers
                     //upload và cập nhật field Logo
                     product.Image = MyTool.UploadImageToFolder(ProductImage, "Products");
                 }
+                product.Stt = _context.Products.Max(a => a.Stt) + 1;
+                product.IsHide = "false";
                 product.ProductId = Guid.NewGuid().ToString();
                 _context.Add(product);
                 await _context.SaveChangesAsync();
