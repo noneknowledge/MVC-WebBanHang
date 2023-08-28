@@ -1,4 +1,5 @@
-﻿@{
+﻿@model MVC_template.Models.HomeProduct
+@{
     ViewData["Title"] = "Show";
     Layout = "~/Views/Shared/_LayoutTemplate.cshtml";
 }
@@ -6,6 +7,25 @@
 
 <section class="service_section layout_padding ">
     <div class="container">
+        <br />
+        <!--New product-->
+        <h2 class="custom_heading">Các loại trái cây mới của trang web</h2>
+        <p class="custom_heading-text">
+            Các sản phẩm trái cây tươi mới vừa được nhập về cửa hàng của shop
+        </p>
+        @await Html.PartialAsync("PartialViewProduct",Model.newProducts)
+        <!--End new product-->
+
+        <br />
+        <!--Top sale-->
+        <h2 class="custom_heading">Các loại trái cây bán chạy</h2>
+        <p class="custom_heading-text">
+            Các sản phẩm trái cây tươi mới, bán chạy nhất của shop
+        </p>
+        @await Html.PartialAsync("PartialViewProduct",Model.topSaleProducts)
+        <!--End top sale-->
+
+        <br />
         <h2 class="custom_heading">Our Services</h2>
         <p class="custom_heading-text">
             Chúng tôi muốn xây dựng trang web cung cấp các dịch vụ như
@@ -52,6 +72,5 @@
         </h2>
     </div>
 </section>
-
-
 <!-- end tasty section -->
+

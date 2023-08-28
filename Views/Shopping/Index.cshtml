@@ -1,6 +1,11 @@
 ﻿@model IEnumerable<MVC_template.Data.Product>
+
 @{
     Layout = "~/Views/Shared/_LayoutTemplateSubpage.cshtml";
+}
+
+@{
+    var Supplier = (List<MVC_template.Data.Supplier>)ViewBag.Supplier;
 }
 
 @if (TempData["alert"] != null)
@@ -9,6 +14,50 @@
         <strong>Success</strong> @TempData["alert"]
     </div>
 }
+<div style="text-align:center"><h2>Các sản phẩm chính</h2>
+<p>Đa dạng chủng loại trái cây nhiệt đới</p>
+</div>
+
+<div class="d-flex justify-content-between">
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Nhà phân phối
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="/Shopping/Index">Tất cả</a></li>
+            @foreach (var item in Supplier)
+            {
+                <li><a class="dropdown-item" href="/Shopping/Index/NhaPhanPhoi/@item.SupplierId">@item.SupplierName</a></li>
+            }
+            
+        </ul>
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Giá
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            @{
+                if (ViewBag.SupplierId  != null)
+                {
+                    var supplierId = ViewBag.SupplierId;
+                    <li><a class="dropdown-item" href="/Shopping/Index/NhaPhanPhoi/@supplierId">Tất cả</a></li>
+                    <li><a class="dropdown-item" href="/Shopping/Index/NhaPhanPhoi/@supplierId/tang">Tăng dần</a></li>
+                    <li><a class="dropdown-item" href="/Shopping/Index/NhaPhanPhoi/@supplierId/giam">Giảm dần</a></li>
+                }
+                else
+                {
+                    <li><a class="dropdown-item" href="/Shopping/Index">Tất cả</a></li>
+                    <li><a class="dropdown-item" href="/Shopping/Index/tang">Tăng dần</a></li>
+                    <li><a class="dropdown-item" href="/Shopping/Index/giam">Giảm dần</a></li>
+                }
+            }
+           
+        </ul>
+    </div>
+
+
+</div>
 
 @*<section id="product" >
     <h2>Các sản phẩm chính</h2>
@@ -33,7 +82,7 @@
     </div>
 
 </section>*@
-@await Html.PartialAsync("PartialViewProduct")
+@await Html.PartialAsync("PartialViewProduct", Model)
 
 
 

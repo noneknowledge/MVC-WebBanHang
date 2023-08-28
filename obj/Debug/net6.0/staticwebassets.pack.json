@@ -17,12 +17,28 @@
       "PackagePath": "staticwebassets\\Images\\Products\\dua-hau.jpg"
     },
     {
+      "Id": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\dua-luoi.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\dua-luoi.jpg"
+    },
+    {
+      "Id": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\man-ha-noi.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\man-ha-noi.png"
+    },
+    {
+      "Id": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\man.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\man.jpg"
+    },
+    {
       "Id": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\mang-cau-gai.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\mang-cau-gai.jpg"
     },
     {
       "Id": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\mit-to-nu.webp",
       "PackagePath": "staticwebassets\\Images\\Products\\mit-to-nu.webp"
+    },
+    {
+      "Id": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\qua-bo.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\qua-bo.jpg"
     },
     {
       "Id": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\sapoche.jpg",
@@ -49,12 +65,20 @@
       "PackagePath": "staticwebassets\\Images\\Products\\trai-cam.jpg"
     },
     {
+      "Id": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\trai-chuoi.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\trai-chuoi.jpg"
+    },
+    {
       "Id": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\trai-coc.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\trai-coc.jpg"
     },
     {
       "Id": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\trai-hong.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\trai-hong.jpg"
+    },
+    {
+      "Id": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\trai-trung-ga.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\trai-trung-ga.jpg"
     },
     {
       "Id": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\xoai.jpg",

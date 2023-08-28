@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kYui+kZCKrjgBRKbLv2OQq+Vj9e8UgrS6jySSaGxGpo=",
+  "Hash": "VjoXO48IREqItf97KMysYgDbGcx58xBbhcqlKA4K5J4=",
   "Source": "MVC_template",
   "BasePath": "_content/MVC_template",
   "Mode": "Default",
@@ -153,6 +153,40 @@
       "OriginalItemSpec": "wwwroot\\Images\\Products\\dua-hau.jpg"
     },
     {
+      "Identity": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\dua-luoi.jpg",
+      "SourceId": "MVC_template",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\",
+      "BasePath": "_content/MVC_template",
+      "RelativePath": "Images/Products/dua-luoi.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\dua-luoi.jpg"
+    },
+    {
+      "Identity": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\man.jpg",
+      "SourceId": "MVC_template",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\",
+      "BasePath": "_content/MVC_template",
+      "RelativePath": "Images/Products/man.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\man.jpg"
+    },
+    {
       "Identity": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\mang-cau-gai.jpg",
       "SourceId": "MVC_template",
       "SourceType": "Discovered",
@@ -170,6 +204,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\Products\\mang-cau-gai.jpg"
     },
     {
+      "Identity": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\man-ha-noi.png",
+      "SourceId": "MVC_template",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\",
+      "BasePath": "_content/MVC_template",
+      "RelativePath": "Images/Products/man-ha-noi.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\man-ha-noi.png"
+    },
+    {
       "Identity": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\mit-to-nu.webp",
       "SourceId": "MVC_template",
       "SourceType": "Discovered",
@@ -185,6 +236,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Products\\mit-to-nu.webp"
+    },
+    {
+      "Identity": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\qua-bo.jpg",
+      "SourceId": "MVC_template",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\",
+      "BasePath": "_content/MVC_template",
+      "RelativePath": "Images/Products/qua-bo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\qua-bo.jpg"
     },
     {
       "Identity": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\sapoche.jpg",
@@ -289,6 +357,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\Products\\trai-cam.jpg"
     },
     {
+      "Identity": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\trai-chuoi.jpg",
+      "SourceId": "MVC_template",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\",
+      "BasePath": "_content/MVC_template",
+      "RelativePath": "Images/Products/trai-chuoi.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\trai-chuoi.jpg"
+    },
+    {
       "Identity": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\trai-coc.jpg",
       "SourceId": "MVC_template",
       "SourceType": "Discovered",
@@ -321,6 +406,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Products\\trai-hong.jpg"
+    },
+    {
+      "Identity": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\trai-trung-ga.jpg",
+      "SourceId": "MVC_template",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\",
+      "BasePath": "_content/MVC_template",
+      "RelativePath": "Images/Products/trai-trung-ga.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\trai-trung-ga.jpg"
     },
     {
       "Identity": "D:\\Desktop\\MVC_E-Commerce\\wwwroot\\Images\\Products\\xoai.jpg",

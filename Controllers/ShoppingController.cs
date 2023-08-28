@@ -3,6 +3,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using MVC_template.Data;
 using MVC_template.Models;
+using NuGet.Packaging.Signing;
 using System.Text.RegularExpressions;
 using System.Xml.Schema;
 
@@ -17,8 +18,14 @@ namespace MVC_template.Controllers
         }
         public IActionResult Home()
         {
-          
-            return View();
+            var homeData = new HomeProduct();
+            var newProducts = _context.Products.Include(a=>a.Supplier).OrderByDescending(a => a.Stt).Take(4);
+            var topProducts  = _context.OrderDetails.GroupBy(a => a.ProductId).OrderByDescending(a => a.Sum(p => p.Quantity)).Take(4).Select(a=>a.Key).ToList();
+            var topSaleProducts  = _context.Products.Include(a=>a.Supplier).Where(a=>topProducts.Contains(a.ProductId));
+
+            homeData.topSaleProducts = topSaleProducts;
+            homeData.newProducts = newProducts;
+            return View(homeData);
         }
 
         public Boolean CheckQuantity(string productID, int quantity)
@@ -32,9 +39,59 @@ namespace MVC_template.Controllers
 
         public IActionResult Index()
         {
+            var supplier = _context.Suppliers.ToList();
+            ViewBag.Supplier = supplier;
             var data = _context.Products.Include(a => a.Supplier).ToList();
             return View(data);
         }
+
+        [HttpGet("Shopping/Index/NhaPhanPhoi/{idSupplier}")]
+        public IActionResult IndexOrderBySupplier(string idSupplier)
+        {
+            
+            ViewBag.SupplierId = idSupplier;
+            var supplier = _context.Suppliers.ToList();
+            ViewBag.Supplier = supplier;
+            var data = _context.Products.Include(a => a.Supplier).Where(a=>a.SupplierId == idSupplier).ToList();
+            return View("Index",data);
+        }
+
+        [HttpGet("Shopping/Index/{orValue}")]
+        public IActionResult IndexOrderByPrice(string orValue)
+        {
+            var supplier = _context.Suppliers.ToList();
+            ViewBag.Supplier = supplier;
+            if (orValue == "tang")
+            {
+                var data = _context.Products.Include(a=>a.Supplier).OrderBy(a => a.Prices);
+                return View("Index", data);
+            }
+            else
+            {
+                var data = _context.Products.Include(a => a.Supplier).OrderByDescending(a => a.Prices);
+                return View("Index", data);
+            }
+            
+        }
+        [HttpGet("Shopping/Index/NhaPhanPhoi/{idSupplier}/{orValue}")]
+        public IActionResult IndexOrderBySupplierPrice(string idSupplier, string orValue)
+        {
+            var supplier = _context.Suppliers.ToList();
+            ViewBag.SupplierId = idSupplier;
+            ViewBag.Supplier = supplier;
+            if (orValue=="tang")
+            {
+                var data = _context.Products.Where(a=>a.SupplierId == idSupplier).Include(a => a.Supplier).OrderBy(a=>a.Prices).ToList();
+                return View("Index", data);
+
+            }
+            else
+            {
+                var data = _context.Products.Where(a => a.SupplierId == idSupplier).Include(a => a.Supplier).OrderByDescending(a => a.Prices).ToList();
+                return View("Index", data);
+            }
+        }
+
         [HttpGet]
         public IActionResult Login() 
         { 
@@ -215,6 +272,7 @@ namespace MVC_template.Controllers
             {
                 return RedirectToAction("Login", "Shopping");
             }    
+            var customerInfor = _context.Customers.FirstOrDefault(a=>a.CustomerId== GlobalValues.CustomerID);
             
             var data = _context.ShoppingCarts.Include(a=>a.Product).Where(a=>a.CustomerId == GlobalValues.CustomerID).ToList();
             foreach (var item in data)
@@ -222,13 +280,13 @@ namespace MVC_template.Controllers
                 if (CheckQuantity(item.ProductId,item.Quantity.Value) == false)
                 {
                     TempData["alert"] = "Sản phẩm: " + item.Product.ProductName + " đã hết số lượng bạn cần";
-                    return View("Cart");
+                    return RedirectToAction(nameof(Cart));
                 }
             }
             if (data.Count() == 0)
             {
                 TempData["alert"] = "Trong giỏ chưa có sản phẩm nào";
-                return View("Cart");
+                return RedirectToAction(nameof(Cart));
             }    
                 
 
@@ -236,6 +294,8 @@ namespace MVC_template.Controllers
             order.OrderId = Guid.NewGuid().ToString();
             order.OrderDate = DateTime.Now.Date;
             order.CustomerId = GlobalValues.CustomerID;
+            order.Address = customerInfor.Address;
+            order.Phone = customerInfor.PhoneNumber;
             _context.Add(order);
             _context.SaveChanges();
             foreach (var item in data)
