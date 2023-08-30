@@ -56,9 +56,21 @@
                 @Html.DisplayFor(modelItem => item.Supplier.SupplierName)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.ProductId">Chỉnh sửa</a> |
+                <a asp-action="Details" asp-route-id="@item.ProductId">Chi tiết</a> |
+                    @{
+                        if (item.IsHide == "false     ")
+                        {
+                            <a asp-action="Delete" asp-route-id="@item.ProductId">
+                                Ẩn</a>
+                        }
+                        else
+                        {
+                            <a asp-action="Delete" asp-route-id="@item.ProductId">
+                                Hiện</a>
+                        }
+                    }
+                    
             </td>
         </tr>
 }

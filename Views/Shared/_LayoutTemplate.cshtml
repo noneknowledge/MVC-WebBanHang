@@ -75,11 +75,17 @@
                         }
                         else
                         {
-                            <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
-                                <a asp-action="Logout" asp-controller="Shopping">
-                                    Đăng xuất
-                                </a>
-                            </div>
+                            <div class="btn-group">
+                                <button class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    @GlobalValues.Name
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <a asp-action="Logout" asp-controller="Shopping">
+                                        Đăng xuất
+                                    </a>
+                                </ul></div>
+                                
+                           
                         }
                     </div>
                 </nav>

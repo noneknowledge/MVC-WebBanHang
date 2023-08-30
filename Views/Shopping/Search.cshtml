@@ -3,10 +3,26 @@
     ViewData["Title"] = "Search";
     Layout = "~/Views/Shared/_LayoutTemplateSubpage.cshtml";
 }
-
+<br />
 <div class="form-outline mb-4">
   <input type="search" class="form-control" id="datatable-search-input">
-  <label class="form-label" for="datatable-search-input">Search</label>
+  <label class="form-label" for="datatable-search-input">Search</label><br />
+    <div class="d-flex justify-content-around">
+        <div>
+            <lable for="from">Giá từ:</lable>
+            <input id="from" type="number" min="0" />
+        </div>
+        <div>
+            <lable for="to">Đến:</lable>
+            <input id="to" type="number" min="0" />
+        </div>
+        <button id="btnFind" type="button" class="btn btn-info">Tìm</button>
+
+    </div>
+  
+  <br/>
+
+  <hr />
 </div>
 <div id="datatable">
 </div>
@@ -14,22 +30,26 @@
 @section Scripts{
     <script>
         $(function (){
-            $("#datatable-search-input").keyup(function (v){
+            $("#btnFind").click(function (v){
                 console.log(v);
-                if ($(this).val().length %2 == 0) return;
+                console.log($("#datatable-search-input").val());
+                console.log( $("#from").val());
+                console.log( $("#to").val());
                 $.ajax({
-                    url: "/Shopping/Search",
+                    url:"/Shopping/AdvancedSearch",
                     type: "POST",
                     data: {
-                        keyword: $(this).val()
+                        keyword: $("#datatable-search-input").val(), fromValue: $("#from").val(), toValue: $("#to").val()
                     },
                     success: function(res){
                         $("#datatable").html(res)
                     },
-                    error: function (xhr,textStatus,error){
-                        alert(xhr.statusText);
-                    }
+                    error: function (xhr, textStatus, error) {
+                        alert(xhr.statusText);}
+
                 });
+                
+                
             });
         });
         

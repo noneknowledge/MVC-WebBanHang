@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using MVC_template.Data;
 using MVC_template.Models;
 using NuGet.Packaging.Signing;
+using System.Net.WebSockets;
 using System.Text.RegularExpressions;
 using System.Xml.Schema;
 
@@ -18,10 +19,11 @@ namespace MVC_template.Controllers
         }
         public IActionResult Home()
         {
+            
             var homeData = new HomeProduct();
-            var newProducts = _context.Products.Include(a=>a.Supplier).OrderByDescending(a => a.Stt).Take(4);
-            var topProducts  = _context.OrderDetails.GroupBy(a => a.ProductId).OrderByDescending(a => a.Sum(p => p.Quantity)).Take(4).Select(a=>a.Key).ToList();
-            var topSaleProducts  = _context.Products.Include(a=>a.Supplier).Where(a=>topProducts.Contains(a.ProductId));
+            var newProducts = _context.Products.Include(a=>a.Supplier).Where(a=>a.Quantity>1 && a.IsHide=="false").OrderByDescending(a => a.Stt).Take(4);
+            var topProducts  = _context.OrderDetails.GroupBy(a => a.ProductId).OrderByDescending(a => a.Sum(p => p.Quantity)).Select(a=>a.Key).ToList();
+            var topSaleProducts  = _context.Products.Include(a=>a.Supplier).Where(a=>topProducts.Contains(a.ProductId) && a.Quantity > 1 && a.IsHide == "false").Take(4);
 
             homeData.topSaleProducts = topSaleProducts;
             homeData.newProducts = newProducts;
@@ -41,7 +43,7 @@ namespace MVC_template.Controllers
         {
             var supplier = _context.Suppliers.ToList();
             ViewBag.Supplier = supplier;
-            var data = _context.Products.Include(a => a.Supplier).ToList();
+            var data = _context.Products.Include(a => a.Supplier).Where(a => a.Quantity > 1 && a.IsHide == "false").ToList();
             return View(data);
         }
 
@@ -52,7 +54,7 @@ namespace MVC_template.Controllers
             ViewBag.SupplierId = idSupplier;
             var supplier = _context.Suppliers.ToList();
             ViewBag.Supplier = supplier;
-            var data = _context.Products.Include(a => a.Supplier).Where(a=>a.SupplierId == idSupplier).ToList();
+            var data = _context.Products.Include(a => a.Supplier).Where(a=> a.Quantity > 1 && a.IsHide == "false" && a.SupplierId == idSupplier).ToList();
             return View("Index",data);
         }
 
@@ -63,12 +65,12 @@ namespace MVC_template.Controllers
             ViewBag.Supplier = supplier;
             if (orValue == "tang")
             {
-                var data = _context.Products.Include(a=>a.Supplier).OrderBy(a => a.Prices);
+                var data = _context.Products.Where(a => a.Quantity > 1 && a.IsHide == "false").Include(a=>a.Supplier).OrderBy(a => a.Prices);
                 return View("Index", data);
             }
             else
             {
-                var data = _context.Products.Include(a => a.Supplier).OrderByDescending(a => a.Prices);
+                var data = _context.Products.Where(a => a.Quantity > 1 && a.IsHide == "false").Include(a => a.Supplier).OrderByDescending(a => a.Prices);
                 return View("Index", data);
             }
             
@@ -81,17 +83,18 @@ namespace MVC_template.Controllers
             ViewBag.Supplier = supplier;
             if (orValue=="tang")
             {
-                var data = _context.Products.Where(a=>a.SupplierId == idSupplier).Include(a => a.Supplier).OrderBy(a=>a.Prices).ToList();
+                var data = _context.Products.Where(a=> a.Quantity > 1 && a.IsHide == "false" && a.SupplierId == idSupplier).Include(a => a.Supplier).OrderBy(a=>a.Prices).ToList();
                 return View("Index", data);
 
             }
             else
             {
-                var data = _context.Products.Where(a => a.SupplierId == idSupplier).Include(a => a.Supplier).OrderByDescending(a => a.Prices).ToList();
+                var data = _context.Products.Where(a => a.Quantity > 1 && a.IsHide == "false" && a.SupplierId == idSupplier).Include(a => a.Supplier).OrderByDescending(a => a.Prices).ToList();
                 return View("Index", data);
             }
         }
 
+       
         [HttpGet]
         public IActionResult Login() 
         { 
@@ -101,16 +104,28 @@ namespace MVC_template.Controllers
         [HttpPost]
         public IActionResult Login(Login model)
         {
-            var userlogin = _context.UserLogins.FirstOrDefault(a=>a.UserName== model.UserName && a.PassWord == model.PassWord);
+            var userlogin = _context.UserLogins.Include(a=>a.Customer).FirstOrDefault(a=>a.UserName== model.UserName && a.PassWord == model.PassWord);
             if (userlogin==null)
             {
                 ViewBag.ThongBao = "Sai tài khoản hoặc mật khẩu";
                 return View();
             }
-            GlobalValues.CustomerID = userlogin.CustomerId;
-            GlobalValues.VaiTro = userlogin.VaiTro;
+            if (userlogin.VaiTro == "customer")
+            {
+                GlobalValues.CustomerID = userlogin.CustomerId;
+                GlobalValues.Name = userlogin.Customer.LastName + " " + userlogin.Customer.FirstName;
+                GlobalValues.VaiTro = userlogin.VaiTro;
+                return RedirectToAction("Home", "Shopping");
+            }
+            else
+            {
+                GlobalValues.VaiTro = userlogin.VaiTro;
+                return RedirectToAction("Index", "Admin");
+            }
+            
+            
 
-            return RedirectToAction("Index", "Home");
+           
         }
 
         public IActionResult Logout() 
@@ -191,6 +206,31 @@ namespace MVC_template.Controllers
             return PartialView("PartialViewProduct",data);
         }
 
+        [HttpPost]
+        public IActionResult AdvancedSearch(string keyword, int? fromValue, int? toValue)
+        {
+            if (fromValue == null)
+            {
+                fromValue = 0;
+            }
+            if(toValue == null)
+            {
+                toValue = 999999999;
+            }
+            if (keyword == null)
+            {
+                var data = _context.Products.Include(a=>a.Supplier).Where(a=> a.Quantity > 1 && a.IsHide == "false" && a.Prices >= fromValue && a.Prices <= toValue).ToList();
+                return PartialView("PartialViewProduct", data);
+            }
+            else
+            {
+                var data = _context.Products.Include(a => a.Supplier).Where(a => a.Quantity > 1 && a.IsHide == "false" && a.ProductName.Contains(keyword) && a.Prices >= fromValue && a.Prices <= toValue).ToList();
+                return PartialView("PartialViewProduct", data);
+            }
+            
+          
+        }
+
 
         public IActionResult Delete(string id)
         {
@@ -221,8 +261,8 @@ namespace MVC_template.Controllers
         {
             if (GlobalValues.CustomerID== null) 
             {
-                TempData["alert"] = "Vui lòng đăng nhập để mua hàng";
-                return RedirectToAction("Index");
+               
+                return RedirectToAction("Login");
             }
 
             var cartItem = _context.ShoppingCarts.SingleOrDefault(a => a.ProductId == id && a.CustomerId == GlobalValues.CustomerID);

@@ -59,7 +59,8 @@ namespace MVC_template.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescription,Quantity,Prices,SupplierId,Image")] Product product,IFormFile ProductImage)
         {
-            
+            try
+            {
                 if (ProductImage != null)
                 {
                     //upload và cập nhật field Logo
@@ -69,8 +70,14 @@ namespace MVC_template.Controllers
                 product.IsHide = "false";
                 product.ProductId = Guid.NewGuid().ToString();
                 _context.Add(product);
-                await _context.SaveChangesAsync();
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return RedirectToAction(nameof(Index));
+            }
+                
             
         }
 
@@ -151,22 +158,24 @@ namespace MVC_template.Controllers
             return View(product);
         }
 
-        // POST: Products/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public IActionResult Hide(string id)
         {
-            if (_context.Products == null)
-            {
-                return Problem("Entity set 'QLWebBanHangContext.Products'  is null.");
-            }
-            var product = await _context.Products.FindAsync(id);
+            var product = _context.Products.FirstOrDefault(a=>a.ProductId== id);
             if (product != null)
             {
-                _context.Products.Remove(product);
+                
+                if (product.IsHide== "false     ")
+                {
+                    product.IsHide = "true";
+                }
+                else
+                {
+                    product.IsHide = "false";
+                }
+                _context.Update(product);
+                _context.SaveChanges();
             }
-            
-            await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
 
