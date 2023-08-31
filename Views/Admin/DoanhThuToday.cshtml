@@ -1,0 +1,60 @@
+﻿@model IEnumerable<DoanhThuTuan>
+@{
+    ViewData["Title"] = "DoanhThuTuan";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<body>
+    <h1>Doanh thu trong tuần</h1>
+    <h2>Tổng tiền: @Model.Sum(p => p.AmountPaid)</h2>
+
+        <table class="table table-bordered">
+	        <tr>
+		        <th>Mã Đơn</th>
+		        <th>Tổng tiền</th>
+		
+	        </tr>
+	        @foreach (var p in Model)
+	        {
+		        <tr>
+			        <td>@p.OrderId</td>
+			        <td>@p.AmountPaid</td>
+		        </tr>
+	        }
+        </table>
+
+    <div id="column-chart" ></div>
+    <div id="pie-chart" ></div>
+</body>
+<script> 
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var jsonData = $.ajax({
+          url: "/Admin/DoanhThuToday",
+          dataType: "json",
+          success: function(jsonData) {
+            // Create empty data table
+            var data = new google.visualization.DataTable();
+            
+            data.addColumn('string', 'Suppliers'); // Thêm cột Năm với kiểu dữ liệu là chuỗi
+            data.addColumn('number', 'Doanh thu'); // Thêm cột Doanh thu với kiểu dữ liệu là số
+
+            
+
+            
+            var rows = [];
+            // add rows
+            for (var i = 0; i < jsonData.length; i++) {
+                var row = [jsonData[i].supplierName, jsonData[i].amountPaid];
+                rows.push(row);
+            }
+            data.addRows(rows);
+            // Instantiate and draw chart
+            var Colchart = new google.visualization.ColumnChart(document.getElementById('column-chart'));
+            var Piechart = new google.visualization.PieChart(document.getElementById('pie-chart'));
+            Colchart.draw(data, {width: 90%, height: 720});
+            Piechart.draw(data, {width: 90%, height: 720});
+    }
+    });
+}
+</script>

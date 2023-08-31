@@ -120,7 +120,7 @@ namespace MVC_template.Controllers
             else
             {
                 GlobalValues.VaiTro = userlogin.VaiTro;
-                return RedirectToAction("Index", "Admin");
+                return RedirectToAction("Index", "Products");
             }
             
             

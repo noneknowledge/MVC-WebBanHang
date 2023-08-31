@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "DoanhThuTheoNgay";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>DoanhThuTheoNgay</h1>
+
+<form class="form-inline">
+    <div class="form-group mb-2">
+        <label for="Day" class="sr-only">Ngày</label>
+        <input type="date" class="form-control-plaintext" id="Day" value="">
+    </div>
+   
+    <button type="button" id="btnThongKe" class="btn btn-primary mb-2">Thống kê</button>
+</form>
+<div id="ketQuaBang"></div>
+@section Scripts{
+    <script>
+        $(function () {
+            //gắn sự kiện click
+            $("#btnThongKe").click(function () {
+                $.ajax({
+                    url: "/Admin/DoanhThuTheoNgayJson",
+                    data: {
+                        Day: $("#Day").val(),                       
+                    },
+                    success: function (response) {
+                        console.log(response);
+                        $.("#ketQuaBang").html(response);
+
+                    //    let tableCode = $("<table class='table table-bordered'  style='max - width: 70 %; margin:auto' />");
+
+                    //    let trHead = $("<tr />");
+                    //    $("<th>").html("OrderId").appendTo(trHead);
+                    //    $("<th>").html("AmountPaid").appendTo(trHead);
+                    //    tableCode.append(trHead);
+                    //    $.each(response, function (idx, item) {
+                    //        console.log(idx, item);
+                    //        let trItem = $("<tr />");
+                    //        $("<td>").html(item.OrderId).appendTo(trItem);
+                    //        console.log(item.OrderId);
+                    //        $("<td>").html(item.AmountPaid).appendTo(trItem);
+                    //        console.log(item.AmountPaid);
+                    //        tableCode.append(trItem);
+                    //    });
+                        
+
+                    //    $("#ketQuaBang").html('');
+                    //    $("#ketQuaBang").append(tableCode);
+                    },
+                    error: function (mess) {
+                        alert(mess);
+                    }
+                });
+            });
+        });
+ </script>
+ }

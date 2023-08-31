@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h1>Index</h1>
@@ -32,9 +32,9 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.SupplierId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.SupplierId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.SupplierId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.SupplierId">Chỉnh sửa</a> |
+                <a asp-action="Details" asp-route-id="@item.SupplierId">Chi Tiết </a> |
+                
             </td>
         </tr>
 }

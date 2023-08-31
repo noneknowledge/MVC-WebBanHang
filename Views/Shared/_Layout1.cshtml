@@ -1,0 +1,19 @@
+﻿@model IEnumerable<DoanhThuTuan>
+
+
+<table class="table table-bordered" style="max-width:70%; margin:auto" >
+	<tr>
+		<th>Ma don hang</th>
+		<th>So tien don hang</th>
+	</tr>
+	@{
+		foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.OrderId</td>
+				<td>@item.AmountPaid</td>
+			</tr>
+		}
+	}
+	
+</table>

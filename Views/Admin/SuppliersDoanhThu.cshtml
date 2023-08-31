@@ -1,0 +1,58 @@
+﻿@model IEnumerable<SuppliersDoanhThu>
+@{
+    ViewData["Title"] = "SuppliersDoanhThu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<h1>Doanh thu của các Supplier</h1>
+<body>
+    <table class="table table-bordered style="max-width:70%;margin:auto"">
+	    <tr>
+		    <th>Suppliers</th>
+		    <th>Doanh Thu</th>
+		
+	    </tr>
+	    @foreach (var p in Model)
+	    {
+		    <tr>
+			    <td>@p.SupplierName</td>
+			    <td>@p.AmountPaid</td>
+		    </tr>
+	    }
+    </table>
+
+    <div id="column-chart" ></div>
+    <div id="pie-chart" ></div>
+</body>
+<script> 
+   google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var jsonData = $.ajax({
+          url: "/Admin/SuppliersDoanhThuChart",
+          dataType: "json",
+          success: function(jsonData) {
+            // Create empty data table
+            var data = new google.visualization.DataTable();
+        
+            data.addColumn('string', 'Suppliers'); // Thêm cột Năm với kiểu dữ liệu là chuỗi
+            data.addColumn('number', 'Doanh thu'); // Thêm cột Doanh thu với kiểu dữ liệu là số
+
+            var rows = [];
+            // add rows
+            for (var i = 0; i < jsonData.length; i++) {
+                var row = [jsonData[i].supplierName, jsonData[i].amountPaid];
+                rows.push(row);
+            }
+            data.addRows(rows);
+            // Instantiate and draw chart
+            var Colchart = new google.visualization.ColumnChart(document.getElementById('column-chart'));
+            var Piechart = new google.visualization.PieChart(document.getElementById('pie-chart'));
+            Colchart.draw(data, {width: '90%', height: 720});
+            Piechart.draw(data, {width: '90%', height: 720});
+        }
+      });
+    }
+</script>

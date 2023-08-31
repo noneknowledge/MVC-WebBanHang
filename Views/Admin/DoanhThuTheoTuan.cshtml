@@ -1,0 +1,82 @@
+﻿@model IEnumerable<DoanhThuTuan>
+@{
+    ViewData["Title"] = "DoanhThuTuan";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+<h1>Doanh thu trong tuần</h1>
+<h2>Tổng tiền: @Model.Sum(p => p.AmountPaid)</h2>
+
+    <table class="table table-bordered style="max-width:70%;margin:auto"">
+	    <tr>
+		    <th>Mã Đơn</th>
+		    <th>Tổng tiền</th>
+		
+	    </tr>
+	    @foreach (var p in Model)
+	    {
+		    <tr>
+			    <td>@p.OrderId</td>
+			    <td>@p.AmountPaid</td>
+		    </tr>
+	    }
+    </table>
+    <div id="column-chart" ></div>
+    <div id="pie-chart" ></div>
+</body>
+
+<script>
+    // Load the Google Charts library
+    google.charts.load('current', { 'packages': ['corechart'] });
+    // Set a callback function to run when the library is loaded
+    google.charts.setOnLoadCallback(drawChart);
+
+    // Define the function to draw the charts
+    function drawChart() {
+        // Fetch the JSON data from the server
+        var jsonData = $.ajax({
+            url: "/Admin/DoanhThuTuanChart",
+            dataType: "json",
+            success: function (jsonData) {
+                // Create an empty data table
+                var data = new google.visualization.DataTable();
+
+                // Add columns for suppliers and revenue
+                data.addColumn('string', 'Suppliers');
+                data.addColumn('number', 'Doanh thu');
+
+                // Create an array to store the rows of data
+                var rows = [];
+                // Loop through the JSON data and add each row to the array
+                for (var i = 0; i < jsonData.length; i++) {
+                    var row = [jsonData[i].supplierName, jsonData[i].amountPaid];
+                    rows.push(row);
+                }
+                // Add the rows to the data table
+                data.addRows(rows);
+
+                // Create options for the column chart and the pie chart
+                var colOptions = {
+                    width: '90%',
+                    height: 720
+                };
+                var pieOptions = {
+                    width: '90%',
+                    height: 720
+                };
+
+                // Instantiate and draw the charts
+                var colChart = new google.visualization.ColumnChart(document.getElementById('column-chart'));
+                var pieChart = new google.visualization.PieChart(document.getElementById('pie-chart'));
+                colChart.draw(data, colOptions);
+                pieChart.draw(data, pieOptions);
+            }
+        });
+    }
+</script>

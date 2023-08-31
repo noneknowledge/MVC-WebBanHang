@@ -33,15 +33,30 @@ namespace MVC_template.Controllers
             
             return RedirectToAction(nameof(Index));
         }
-        public IActionResult Delete(string id)
+        
+        public IActionResult Details(string id)
         {
-            var data = _context.Suppliers.FirstOrDefault(a=>a.SupplierId == id);
-            if (data != null)
-            {
-                _context.Remove(data); _context.SaveChanges();
-            }
+            var data = _context.Suppliers.FirstOrDefault(a => a.SupplierId == id);
 
+            return View(data);
+        }
+        public IActionResult Edit(string id)
+        {
+            var data = _context.Suppliers.FirstOrDefault(a => a.SupplierId == id);
+
+            return View(data);
+        }
+        [HttpPost]
+        public IActionResult Edit(Supplier model)
+        {
+            var Suppliers = _context.Suppliers.FirstOrDefault(a => a.SupplierId == model.SupplierId);
+            Suppliers.SupplierName = model.SupplierName;
+            Suppliers.Description = model.Description;  
+
+            _context.Update(Suppliers);
+            _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+
     }
 }

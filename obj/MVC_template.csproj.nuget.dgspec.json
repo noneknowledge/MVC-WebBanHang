@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desktop\\MVC_E-Commerce\\MVC_template.csproj": {}
+    "D:\\Desktop\\MVC_E-CommerceFinal\\MVC_E-CommerceFinal\\MVC_E-CommerceFinal\\MVC_template.csproj": {}
   },
   "projects": {
-    "D:\\Desktop\\MVC_E-Commerce\\MVC_template.csproj": {
+    "D:\\Desktop\\MVC_E-CommerceFinal\\MVC_E-CommerceFinal\\MVC_E-CommerceFinal\\MVC_template.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desktop\\MVC_E-Commerce\\MVC_template.csproj",
+        "projectUniqueName": "D:\\Desktop\\MVC_E-CommerceFinal\\MVC_E-CommerceFinal\\MVC_E-CommerceFinal\\MVC_template.csproj",
         "projectName": "MVC_template",
-        "projectPath": "D:\\Desktop\\MVC_E-Commerce\\MVC_template.csproj",
+        "projectPath": "D:\\Desktop\\MVC_E-CommerceFinal\\MVC_E-CommerceFinal\\MVC_E-CommerceFinal\\MVC_template.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Desktop\\MVC_E-Commerce\\obj\\",
+        "outputPath": "D:\\Desktop\\MVC_E-CommerceFinal\\MVC_E-CommerceFinal\\MVC_E-CommerceFinal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,6 +57,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
